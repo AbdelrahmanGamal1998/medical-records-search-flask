@@ -1,0 +1,64 @@
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+{% for Record in HealthRecords %}
+<body>
+
+  <section id="patients-container">
+
+    <div class="card">
+
+      <h1>Patient Info</h1>
+
+      <div class="patient-info">
+
+
+        <div class="content-aligning">
+          <span>Name: <span class="dynamic-data">{{name}}</span></span>
+          <span>Age: <span class="dynamic-data">{{age}}</span></span>
+        </div>
+
+        <div class="content-aligning">
+          <span>Address: <span class="dynamic-data">{{address}}</span></span>
+          <span>Phone: <span class="dynamic-data">{{phone}}</span></span>
+        </div>
+
+        <div class="content-aligning">
+          <span>Height: <span class="dynamic-data">{{height}}</span></span>
+          <span>Weight: <span class="dynamic-data">{{weight}}</span></span>
+        </div>
+
+
+        <div class="content-aligning-fix">
+          <P class="p-fix">Health Record</P>
+          <div class="content-aligning-fix-i">
+            <span>Doctor Name: <span class="dynamic-data">{{Record["Doctor_Name"]}}</span></span>
+            <span>Date: <span class="dynamic-data">{{Record["Date"]}}</span></span>
+          </div>
+          <div class="content-aligning-fix-i">
+            <span>Accident: <span class="dynamic-data">{{Record["Accident"]}}</span></span>
+            <span>Diagnose: <span class="dynamic-data">{{Record["Diagnose"]}}</span></span>
+          </div>
+        </div>
+
+
+        <div class="content-aligning-fix">
+          <P class="p-fix">Medical History</P>
+          <p class="dynamic-data">{{Record["MedicalHistory"]}}</p>
+        </div>
+
+      </div>
+    </div>
+    <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_ErlWV1.json" background="transparent" speed="0.5"
+      style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+
+  </section>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+{% endfor %}  
+
+</html>

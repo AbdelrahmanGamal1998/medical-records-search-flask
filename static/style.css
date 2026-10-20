@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lora", serif;
+}
+#patients-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.card {
+  width: 600px;
+  height: 400px;
+  box-shadow: 5px 5px 4px gray;
+  transform: scale(0.9);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.8s ease;
+  border: 2px solid rgba(54, 54, 54, 0.7);
+}
+.card:hover {
+  background-color: #414141;
+  transform: scale(1);
+  border: none;
+}
+.card:hover h1 {
+  color: #fafafa;
+}
+.card:hover .patient-info span {
+  color: #fafafa;
+}
+.card:hover .patient-info p {
+  color: #fafafa;
+}
+h1 {
+  color: rgb(54, 54, 54);
+  text-align: center;
+  padding: 10px 0px 20px 0px;
+  font-size: 28px;
+}
+
+.patient-info {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  width: 90%;
+  justify-content: space-around;
+  margin: auto;
+}
+.content-aligning {
+  display: flex;
+  justify-content: space-between;
+}
+p {
+  color: rgb(54, 54, 54);
+}
+span {
+  font-size: 18px;
+  min-width: 200px;
+  color: rgb(54, 54, 54);
+}
+
+.dynamic-data {
+  font-size: 16px;
+  color: rgb(50, 50, 50);
+}
+.content-aligning-fix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.content-aligning-fix span {
+  padding-bottom: 10px;
+}
+
+.content-aligning-fix-i {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.content-aligning-fix-i span {
+  min-width: 200px;
+}
+.p-fix {
+  padding: 10px 0px 10px 0px;
+}
+
+/*search*/
+
+#search-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #141f32;
+  color: white;
+  background: linear-gradient(180deg #243953, #141f32);
+}
+
+.search-container {
+  width: 340px;
+  height: auto;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 60px 30px;
+}
+
+.form-svg {
+  transform: translateY(-20%);
+}
